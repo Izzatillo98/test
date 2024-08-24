@@ -22,7 +22,7 @@ namespace test
         }
         static void ShowStudentInfo(out Student student)
         {
-            student = new Student("Tillo");
+            student = new Student("Tillo"); 
             Console.WriteLine(student.Name);
             Console.WriteLine(student.Surname);
             student.Surname = "Abdusamatov";
