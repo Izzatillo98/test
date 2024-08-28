@@ -1,4 +1,5 @@
-﻿using test.model;
+﻿using test;
+using System;
 
 namespace test
 {
@@ -6,28 +7,47 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Student student;
-            ShowStudentInfo(out student);
-            Console.WriteLine(student.Surname);
+            Thread myThread = new Thread(Addnumber);
+            myThread.Start();
+
+            Thread myThread2 = new Thread(MinusNumber);
+            myThread.Start();
+
+            Thread myThread3 = new Thread(ExtraNumber);
+            myThread.Start();
+
+            Thread myThread4 = new Thread(BolishNumber);
+            myThread.Start();
+
+            Thread myThread5 = new Thread(FoizNumber);
+            myThread.Start();
+
         }
-        //params
-        static void Add(params int[]b) 
+        public static void Addnumber() 
         {
-            int sum = 0;
-            for (int i = 0; i < b.Length; i++)
-            { 
-                sum += b[i];
-            }
-            Console.WriteLine(sum);
+            Console.WriteLine(1 + 2);
         }
-        static void ShowStudentInfo(out Student student)
+
+        public static void MinusNumber()
         {
-            student = new Student("Tillo");  
-            Console.WriteLine(student.Name);
-            Console.WriteLine(student.Surname);
-            student.Surname = "Abdusamatov";
-            
+            Console.WriteLine(10 - 2);
         }
+
+        public static void ExtraNumber()
+        {
+            Console.WriteLine(1 * 2);
+        }
+
+        public static void BolishNumber()
+        {
+            Console.WriteLine(1 / 2);
+        }
+
+        public static void FoizNumber()
+        {
+            Console.WriteLine(1 % 2);
+        }
+
     }
 
 }
