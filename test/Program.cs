@@ -11,16 +11,16 @@ namespace test
             myThread.Start();
 
             Thread myThread2 = new Thread(MinusNumber);
-            myThread.Start();
+            myThread2.Start();
 
             Thread myThread3 = new Thread(ExtraNumber);
-            myThread.Start();
+            myThread3.Start();
 
             Thread myThread4 = new Thread(BolishNumber);
-            myThread.Start();
+            myThread4.Start();
 
             Thread myThread5 = new Thread(FoizNumber);
-            myThread.Start();
+            myThread5.Start();
 
         }
         public static void Addnumber() 
