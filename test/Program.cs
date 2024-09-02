@@ -19,7 +19,7 @@ namespace test
             Thread myThread4 = new Thread(BolishNumber);
             myThread4.Start();
 
-            Thread myThread5 = new Thread(FoizNumber); 
+            Thread myThread5 = new Thread(FoizNumber);
             myThread5.Start();
 
         }
